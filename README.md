@@ -39,9 +39,12 @@ A full-stack platform that dramatically reduces the time and cost of underwritin
 
 ---
 ## Screenshots
-
-| SME Upload Flow | Risk Dashboard | Financial Analysis | Business Insights |
+| SME Upload | Investor Dashboard | Financial Analysis |
 |---|---|---|
-| ![Upload](./ledgeros-mobile/assets/upload.png) | ![Dashboard](./ledgeros-mobile/assets/dashboard.png) | ![Analysis]((./ledgeros-mobile/assets/analysis.png)) |![Insights]((./ledgeros-mobile/assets/insights.png)) |
+| ![](./ledgeros-mobile/assets/upload.png) | ![](./ledgeros-mobile/assets/dashboard.png) | ![](./ledgeros-mobile/assets/analysis.png) |
+
+| Business Insights |
+|---|
+| ![](./ledgeros-mobile/assets/insights.png) |
 
 ---
