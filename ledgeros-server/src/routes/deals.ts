@@ -4,11 +4,11 @@ import { supabase } from '../db/client';
 
 const router = Router();
 
-// ---------------------------------------------------------------------------
+
 // GET /api/deals
 // Returns deals scoped to a specific investor (via ?investor_id=)
 // If no investor_id, returns all (for backwards compat / admin)
-// ---------------------------------------------------------------------------
+
 router.get('/', async (req: Request, res: Response) => {
   const { investor_id } = req.query;
 
@@ -33,11 +33,11 @@ router.get('/', async (req: Request, res: Response) => {
   return res.json(data);
 });
 
-// ---------------------------------------------------------------------------
+
 // GET /api/deals/discover
 // All companies that have completed docs — visible to any investor to request
 // Excludes companies the investor already has a deal for
-// ---------------------------------------------------------------------------
+
 router.get('/discover', async (req: Request, res: Response) => {
   const { investor_id } = req.query;
 
@@ -73,10 +73,10 @@ router.get('/discover', async (req: Request, res: Response) => {
   return res.json(available);
 });
 
-// ---------------------------------------------------------------------------
+
 // POST /api/deals/request
 // Investor requests access to a company — creates a deal record
-// ---------------------------------------------------------------------------
+
 router.post('/request', async (req: Request, res: Response) => {
   const { investor_id, company_id } = req.body;
 
@@ -129,9 +129,9 @@ router.post('/request', async (req: Request, res: Response) => {
   return res.status(201).json(deal);
 });
 
-// ---------------------------------------------------------------------------
+
 // GET /api/deals/:id
-// ---------------------------------------------------------------------------
+
 router.get('/:id', async (req: Request, res: Response) => {
   const { data, error } = await supabase
     .from('deals')
@@ -151,9 +151,9 @@ router.get('/:id', async (req: Request, res: Response) => {
   return res.json(data);
 });
 
-// ---------------------------------------------------------------------------
+
 // PATCH /api/deals/:id
-// ---------------------------------------------------------------------------
+
 router.patch('/:id', async (req: Request, res: Response) => {
   const { valuation_low, valuation_high, risk_score, status } = req.body;
   const updates: Record<string, any> = {};

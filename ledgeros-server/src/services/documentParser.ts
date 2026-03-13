@@ -113,9 +113,9 @@ Document text:\n${text}`,
   return base[category] ?? `Extract all financial data from this document and return a valid JSON object with key financial metrics. Document:\n${text}`;
 }
 
-// ---------------------------------------------------------------------------
+
 // Financials
-// ---------------------------------------------------------------------------
+
 async function normalizeAndStoreFinancials(companyId: string, financials: any[]) {
   for (const fin of financials) {
     const revenue     = Number(fin.revenue) || 0;
@@ -150,9 +150,9 @@ async function normalizeAndStoreFinancials(companyId: string, financials: any[])
   }
 }
 
-// ---------------------------------------------------------------------------
+
 // Risk signals
-// ---------------------------------------------------------------------------
+
 async function generateRiskSignals(companyId: string, parsed: any, category: string) {
   const signals: any[] = [];
 
@@ -180,9 +180,9 @@ async function generateRiskSignals(companyId: string, parsed: any, category: str
   }
 }
 
-// ---------------------------------------------------------------------------
-// Insights — one or two per document
-// ---------------------------------------------------------------------------
+
+// Insights: one or two per document
+
 async function generateInsights(companyId: string, parsed: any, category: string) {
   const insights: any[] = [];
 

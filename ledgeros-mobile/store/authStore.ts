@@ -1,4 +1,4 @@
-// store/authStore.ts — place in ledgeros-mobile/store/authStore.ts
+// store/authStore.ts
 import { create } from 'zustand';
 import { api } from '../lib/api';
 

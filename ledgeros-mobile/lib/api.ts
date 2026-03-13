@@ -1,4 +1,4 @@
-// lib/api.ts — place in ledgeros-mobile/lib/api.ts
+// lib/api.ts
 const BASE_URL = process.env.EXPO_PUBLIC_API_URL ?? 'http://localhost:3001/api';
 
 class ApiClient {
